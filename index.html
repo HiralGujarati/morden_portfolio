@@ -4,13 +4,223 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hiral | Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Hiral</div>
 
-  <h1>Hello 👋</h1>
-  <p>My Vanilla JS Portfolio has started.</p>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
+    <div class="nav-controls">
+      <!-- Theme Toggle -->
+      <div class="theme-toggle" id="themeToggle">
+        <input type="checkbox" id="themeSwitch" class="theme-switch">
+        <label for="themeSwitch" class="theme-label">
+          <span class="sun-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 2v2M12 20v2M4 12h2M16 12h2M6.34 6.34l1.42 1.42M16.24 16.24l1.42 1.42M6.34 17.66l1.42-1.42M16.24 7.76l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="moon-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+      </div>
+      
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="section hero">
+    <h1>Hi, I'm <span>Hiral Gujarati</span></h1>
+    <p>Frontend Developer | React js</p>
+    <a href="#projects" class="btn">View Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I build fast, responsive and modern web interfaces using
+      pure HTML, CSS and JavaScript without frameworks.
+      and also Well Understand react Js and also have a good knowledge of node js
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section gray">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="card">
+        <h3>Todo App</h3>
+        <p>CRUD app using Vanilla JS</p>
+      </div>
+
+      <div class="card">
+        <h3>Weather App</h3>
+        <p>API integration with Fetch</p>
+      </div>
+      <div class="card">
+        <h3>Social Media Manager </h3>
+        <p>connect your social chanels</p>
+      </div>
+
+
+      <div class="card">
+        <h3>Portfolio</h3>
+        <p>Modern responsive UI</p>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    
+    <div class="skills-container">
+      <div class="skills-grid">
+        <div class="skill-item" data-skill="HTML">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+          </div>
+          <span class="skill-name">HTML5</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="CSS">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+          </div>
+          <span class="skill-name">CSS3</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="JavaScript">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+          </div>
+          <span class="skill-name">JavaScript</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="React">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+          </div>
+          <span class="skill-name">React.js</span>
+          
+        </div>
+        
+        <div class="skill-item" data-skill="Tailwind">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+          </div>
+          <span class="skill-name">Tailwind CSS</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="MUI">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="Material-UI">
+          </div>
+          <span class="skill-name">Material-UI</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="Node.js">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          </div>
+          <span class="skill-name">Node.js</span>
+           
+        </div>
+        
+        <div class="skill-item" data-skill="SQL">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+          </div>
+          <span class="skill-name">SQL</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="MongoDB">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+          </div>
+          <span class="skill-name">MongoDB</span>
+        
+        </div>
+        
+        <div class="skill-item" data-skill="Git">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          </div>
+          <span class="skill-name">Git</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="GitHub">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          </div>
+          <span class="skill-name">GitHub</span>
+          
+        </div>
+        
+        <div class="skill-item" data-skill="GitLab">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab">
+          </div>
+          <span class="skill-name">GitLab</span>
+        
+        </div>
+        
+        <div class="skill-item" data-skill="Jira">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira">
+          </div>
+          <span class="skill-name">Jira</span>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 Hiral Gujarati
+  </footer>
+
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
