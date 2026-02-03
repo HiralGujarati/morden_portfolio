@@ -1,3 +1,82 @@
+// Custom Cursor with Two Dots
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorFollower = document.querySelector('.cursor-follower');
+
+// Only initialize cursor on desktop
+if (window.innerWidth > 768) {
+  let mouseX = 0;
+  let mouseY = 0;
+  let followerX = 0;
+  let followerY = 0;
+
+  // Update main dot position immediately
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
+  });
+
+  // Smooth follower animation
+  function animateFollower() {
+    const speed = 0.15; // Adjust speed of following effect
+    
+    followerX += (mouseX - followerX) * speed;
+    followerY += (mouseY - followerY) * speed;
+    
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top = followerY + 'px';
+    
+    requestAnimationFrame(animateFollower);
+  }
+  
+  animateFollower();
+
+  // Add hover effect to interactive elements
+  const interactiveElements = document.querySelectorAll('a, button, .skill-item, .card, input, textarea, .theme-label, .menu-btn, nav a, .btn, .project-link');
+  
+  interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      cursorDot.classList.add('hover');
+      cursorFollower.classList.add('hover');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      cursorDot.classList.remove('hover');
+      cursorFollower.classList.remove('hover');
+    });
+    
+    // Ensure cursor works for clicks
+    element.addEventListener('click', (e) => {
+      // Add click animation
+      cursorDot.style.transform = 'translate(-50%, -50%) scale(0.8)';
+      cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.9)';
+      
+      setTimeout(() => {
+        cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.3)';
+      }, 100);
+      
+      setTimeout(() => {
+        cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+      }, 200);
+    });
+  });
+
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', () => {
+    cursorDot.style.opacity = '0';
+    cursorFollower.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', () => {
+    cursorDot.style.opacity = '1';
+    cursorFollower.style.opacity = '1';
+  });
+}
+
 // Mobile Menu Toggle
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");

@@ -7,16 +7,64 @@
 
 /* Modern Cursor Styles */
 body {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%23FFD700" stroke="%23FFA500" stroke-width="2"/><circle cx="11" cy="13" r="2" fill="%23000"/><circle cx="21" cy="13" r="2" fill="%23000"/><path d="M10 19 Q16 25 22 19" stroke="%23000" stroke-width="2" fill="none"/></svg>') 16 16, auto;
+  cursor: none !important;
 }
 
-a, button, .skill-item, .card, input, textarea, .theme-label, .menu-btn, nav a, .btn, .project-link {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%23FFD700" stroke="%23FFA500" stroke-width="2"/><circle cx="11" cy="13" r="2" fill="%23000"/><circle cx="21" cy="13" r="2" fill="%23000"/><path d="M10 19 Q16 25 22 19" stroke="%23000" stroke-width="2" fill="none"/></svg>') 16 16, pointer;
+/* Force custom cursor on all interactive elements */
+* {
+  cursor: none !important;
 }
 
-/* Hover state for interactive elements */
-a:hover, button:hover, .skill-item:hover, .card:hover, input:hover, textarea:hover, .theme-label:hover, .menu-btn:hover, nav a:hover, .btn:hover, .project-link:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="%23FFD700" stroke="%23FFA500" stroke-width="2"/><circle cx="12" cy="15" r="2.5" fill="%23000"/><circle cx="24" cy="15" r="2.5" fill="%23000"/><path d="M11 21 Q18 28 25 21" stroke="%23000" stroke-width="2.5" fill="none"/><circle cx="28" cy="8" r="2" fill="%23FF69B4"/></svg>') 18 18, pointer;
+a, button, .skill-item, .card, input, textarea, .theme-label, .menu-btn, nav a, .btn, .project-link, [onclick], [role="button"], .logo {
+  cursor: none !important;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #667eea;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-follower {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.15s ease-out;
+}
+
+.cursor-dot.hover {
+  background: #764ba2;
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: transform 0.2s ease;
+}
+
+.cursor-follower.hover {
+  border-color: #764ba2;
+  transform: translate(-50%, -50%) scale(1.3);
+  transition: transform 0.2s ease;
+}
+
+/* Hide cursor on mobile */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  
+  .cursor-dot,
+  .cursor-follower {
+    display: none;
+  }
 }
 
 :root {
@@ -67,7 +115,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #28346b 0%, #764ba2 100%);
   opacity: 0.03;
   z-index: -1;
 }
@@ -458,7 +506,7 @@ nav a:hover::after {
   border-radius: 20px;
   box-shadow: 0 10px 40px var(--shadow);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
+    position: relative;
   overflow: hidden;
   border: 1px solid rgba(102, 126, 234, 0.1);
 }
@@ -592,8 +640,8 @@ textarea {
 }
 
 #skills {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/home.jpg');
+  background-size: auto;
   background-position: center;
   background-attachment: scroll;
   position: relative;
@@ -755,13 +803,92 @@ textarea {
 .skill-item:nth-child(12) { transition-delay: 1.2s; }
 .skill-item:nth-child(13) { transition-delay: 1.3s; }
 
-/* Footer */
-footer {
-  padding: 30px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--dark) 0%, #2d3748 100%);
-  color: white;
+/* Modern Footer */
+.modern-footer {
+  background: var(--light);
+  border-top: 1px solid rgba(102, 126, 234, 0.15);
+  padding: 30px 0;
   margin-top: 80px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+[data-theme="dark"] .modern-footer {
+  background: linear-gradient(135deg, var(--dark) 0%, #1a202c 100%);
+  border-top-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-left p,
+.footer-right p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .footer-left p,
+[data-theme="dark"] .footer-right p {
+  color: #a0aec0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.social-links a {
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+[data-theme="dark"] .social-links a {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.2);
+  color: #e2e8f0;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+[data-theme="dark"] .social-links a:hover {
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6);
+}
+
+.social-links a svg {
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover svg {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 /* 📱 Mobile */
@@ -890,5 +1017,20 @@ footer {
   .skill-icon svg {
     width: 24px;
     height: 24px;
+  }
+  
+  /* Modern Footer Mobile Responsive */
+  .modern-footer {
+    display: none;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .social-links {
+    justify-content: center;
   }
 }
