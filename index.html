@@ -3,14 +3,256 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hiral | Portfolio</title>
+  <title>Hiral Gujarati | Frontend Developer | JavaScript & React Portfolio</title>
+  
+<meta name="description" content="Hiral Gujarati is a Frontend Developer specializing in JavaScript, React.js, and modern responsive web development. View projects, skills, and contact details.">
+
+<meta name="keywords" content="Frontend Developer, JavaScript Developer, React Developer, Portfolio, Web Developer India">
+
+<meta name="author" content="Hiral Gujarati">
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-follower"></div>
+  
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Hiral</div>
 
-  <h1>Hello 👋</h1>
-  <p>My Vanilla JS Portfolio has started.</p>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
+    <div class="nav-controls">
+      <!-- Theme Toggle -->
+      <div class="theme-toggle" id="themeToggle">
+        <input type="checkbox" id="themeSwitch" class="theme-switch">
+        <label for="themeSwitch" class="theme-label">
+          <span class="sun-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 2v2M12 20v2M4 12h2M16 12h2M6.34 6.34l1.42 1.42M16.24 16.24l1.42 1.42M6.34 17.66l1.42-1.42M16.24 7.76l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="moon-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </label>
+      </div>
+      
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+  <main>
+<!-- Home -->
+  <section id="home" class="section hero">
+    <h1>Hi, I'm <span>Hiral Gujarati</span></h1>
+    <p>Frontend Developer | React js</p>
+    <a href="#projects" class="btn">View Work</a>
+  </section>
+
+   <!-- About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I build fast, responsive and modern web interfaces using
+      pure HTML, CSS and JavaScript without frameworks.
+      and also Well Understand react Js and also have a good knowledge of node js
+    </p>
+  </section>
+ 
+  <!-- Projects -->
+  <section id="projects" class="section gray">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="card">
+        <h3>Todo App</h3>
+        <p>CRUD app using Vanilla JS</p>
+      </div>
+
+
+      <div class="card">
+        <h3>Social Media Manager </h3>
+        <p>connect your social chanels</p>
+      </div>
+
+
+      <div class="card">
+        <h3>Portfolio</h3>
+        <p>Modern responsive UI</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    
+    <div class="skills-container">
+      <div class="skills-grid">
+        <div class="skill-item" data-skill="HTML">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 skill icon used by frontend developer">
+          </div>
+          <span class="skill-name">HTML5</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="CSS">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+          </div>
+          <span class="skill-name">CSS3</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="JavaScript">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+          </div>
+          <span class="skill-name">JavaScript</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="React">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+          </div>
+          <span class="skill-name">React.js</span>
+          
+        </div>
+        
+        <div class="skill-item" data-skill="Tailwind">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+          </div>
+          <span class="skill-name">Tailwind CSS</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="MUI">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="Material-UI">
+          </div>
+          <span class="skill-name">Material-UI</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="Node.js">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          </div>
+          <span class="skill-name">Node.js</span>
+           
+        </div>
+        
+        <div class="skill-item" data-skill="SQL">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+          </div>
+          <span class="skill-name">SQL</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="MongoDB">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+          </div>
+          <span class="skill-name">MongoDB</span>
+        
+        </div>
+        
+        <div class="skill-item" data-skill="Git">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          </div>
+          <span class="skill-name">Git</span>
+         
+        </div>
+        
+        <div class="skill-item" data-skill="GitHub">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+          </div>
+          <span class="skill-name">GitHub</span>
+          
+        </div>
+        
+        <div class="skill-item" data-skill="GitLab">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab">
+          </div>
+          <span class="skill-name">GitLab</span>
+        
+        </div>
+        
+        <div class="skill-item" data-skill="Jira">
+          <div class="skill-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira">
+          </div>
+          <span class="skill-name">Jira</span>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="modern-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2026 Hiral Gujarati</p>
+      </div>
+      
+      <div class="footer-center">
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="mailto:hiral@example.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.517-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-right">
+        <p>Built with ❤️</p>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
