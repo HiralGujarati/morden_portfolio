@@ -197,7 +197,7 @@ if (heroTitle) {
   }
   
   // Start typing after page load
-  setTimeout(typeWriter, 500);
+  setTimeout(typeWriter, 1000);
 }
 
 // Form validation and submission
