@@ -338,6 +338,13 @@ nav a:hover::after {
   background-clip: text;
 }
 
+#about p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--text-light);
+}
+
 .gray {
   background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
 }
